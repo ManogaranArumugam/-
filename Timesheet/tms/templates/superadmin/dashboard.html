@@ -1,0 +1,61 @@
+{% extends "common/default_header.html" %}
+{% block body %}
+  <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Dashboard <small> live Project Details</small></h2>
+
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                      <thead>
+                        <tr>
+                          <th>S.no</th>
+                          <th>project code </th>
+                          <th>project name </th>
+
+                          <th>Client name</th>
+                          <th>Enduser name</th>
+                          <th>Start date</th>
+                          <th>End date</th>
+                          <th>Man-hour</th>
+                          <th>status</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+
+{% for i in range %}
+
+                          <tr>
+                          <td>{{i}}</td>
+                          <td>J185{{ i }}</td>
+                          <td>Test - {{ i }}</td>
+                          <td> Cilent Name</td>
+                          <td>Enduser</td>
+                          <td>2011/04/25</td>
+                          <td>2011/04/25</td>
+
+                          <td>5421</td>
+                          <td> </td>
+
+
+                        </tr>
+
+
+{% endfor %}
+
+                       </tbody>
+                    </table>
+
+
+                  </div>
+                </div>
+              </div>
+
+{% endblock %}

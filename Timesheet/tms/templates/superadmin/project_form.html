@@ -1,0 +1,150 @@
+{% extends "common/default_header.html" %}
+{% load crispy_forms_tags %}
+{% block body %}
+
+     <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                  <div class="x_content">
+
+
+                      <!--<form class="form form-horizontal" method="post"-->
+                    <!--action="">-->
+                    <!--{% crispy form %}-->
+                    <!--{% csrf_token %}-->
+                    <!--<input class="btn btn-primary pull-right" type="submit" value="Create"/>-->
+                    <!--</form>-->
+
+                    <form class="form-horizontal form-label-left" novalidate method="post" action="{% url 'project_form'  %}">
+
+
+                      <span class="section">  Project Info</span>
+
+
+                        {% crispy form %}
+                        {% csrf_token %}
+
+
+
+
+
+
+
+                     <!-- <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Project Type <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                        <select class="form-control" id="select" name="project_type" data-validate-length-range="6" data-validate-words="2"  >
+                            <option>Select option</option>
+                            <option>Project</option>
+                            <option>Tender</option>
+                            <option>R & D</option>
+                          </select>
+                        </div>
+                      </div>-->
+
+                        <!--<div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Project Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder=" Project Name" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Client Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="client_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="4ADESIGN">4ADESIGN</option>
+                                <option value="AL FALAHY COMPANY LLC">AL FALAHY COMPANY LLC</option>
+                                <option value="Amway,India">Amway,India</option>
+                                <option value="ARMA – ELEKTROPANC ELECTROMECHANICAL CO. LLC, Dubai, UAE	">ARMA – ELEKTROPANC ELECTROMECHANICAL CO. LLC, Dubai, UAE</option>				</option><option value="ATLAS International Engineering Consultants				">ATLAS International Engineering Consultants				</option><option value="AYT Electrical LTD, KSA">AYT Electrical LTD, KSA</option><option value="Best &amp; Betas Consortium">Best &amp; Betas Consortium</option>
+                          </select>
+                        </div>
+                      </div>
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">End User Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="4ADESIGN">4ADESIGN</option>
+                                <option value="Abu Dhabi Company for Onshore Oil Operations (ADCO)">Abu Dhabi Company for Onshore Oil Operations (ADCO)</option>
+                                <option value="Abu Dhabi Gas Liquefaction Company Limited">Abu Dhabi Gas Liquefaction Company Limited				</option>
+                                <option value="ADCO		">ADCO		</option>
+                                <option value="Al Khaleej Sugars">Al Khaleej Sugars</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Project Start Date <span class="required">*</span> </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                  <div class="input-group date" id="fromdate">
+                                      <input type="text" class="form-control">
+                                      <span class="input-group-addon">
+                                          <span class="glyphicon glyphicon-calendar"></span>
+                                      </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                        <div class="item form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Project End Date <span class="required">*</span> </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                  <div class="input-group date" id="todate">
+                                      <input type="text" class="form-control">
+                                      <span class="input-group-addon">
+                                          <span class="glyphicon glyphicon-calendar"></span>
+                                      </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Project Status<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="Active">In-Progress</option>
+                                <option value="InActive">Closed</option>
+                                <option value="Cancel">Cancelled</option>
+                                <option value="Hold">Hold</option>
+                                <option value="As-build">As Build</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Project Description  <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea id="textarea" required="required" name="textarea"  class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>-->
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                          <button type="button" class="btn btn-primary">Cancel</button>
+                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+{% endblock %}

@@ -1,0 +1,178 @@
+{% extends "common/default_header.html" %}
+{% block body %}
+
+     <div class="">
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                  <div class="x_content">
+
+                    <form class="form-horizontal form-label-left" novalidate>
+
+
+                      <span class="section">  Employee Task Entry</span>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Project Type <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control" id="project_type" name="project_type" data-validate-length-range="6" data-validate-words="2"  >
+                            <option>Select option</option>
+                            <option>Project</option>
+                            <option>Tender</option>
+                            <option>R & D</option>
+                          </select>
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Project Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control" id="project_name" name="project_name" data-validate-length-range="6" data-validate-words="2"  >
+                            <option>Select option</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Sub Project code <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="form-control" id="sub_project_code" name="sub_project_code" data-validate-length-range="6" data-validate-words="2"  >
+                            <option>Select option</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Department Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="client_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="4A_CVL">Civil</option>
+                                <option value="4A_ELE">Electrical </option>
+                                <option value="4A_MEC">Mechanical</option>
+                                <option value="4A_TL">Transmission Lines</option>
+                            </select>
+                        </div>
+                      </div>
+
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Department Head Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="39">Arumugam T</option>
+                                <option value="37">Kamaraj D</option>
+                          </select>
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Manager Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="select2_single form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                               <option value="39">Arumugam T</option>
+                                <option value="37">Kamaraj D</option>
+                                <option value="170">Kamaraj S</option>
+                                <option value="166">Kumaravel R</option>
+                                <option value="176">Srinivasan V</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Team Lead Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+
+
+                          </select>
+                        </div>
+                      </div>
+
+
+                   <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">  Employee name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="allocation_manhour_" placeholder=" Employee Name" required="required" type="text">
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select"> Worked On  <span class="required">*</span> </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                  <div class="input-group date" id="fromdate">
+                                      <input type="text" class="form-control">
+                                      <span class="input-group-addon">
+                                          <span class="glyphicon glyphicon-calendar"></span>
+                                      </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Hours <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                         <input type="number" id="telephone" name="task_man_hours"  placeholder=" Enter to the Man-hours"  required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="select">Work Handled <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control" name="enduser_name" required="required" data-validate-length-range="6" data-validate-words="2"  >
+                                <option>Select option</option>
+                                <option value="Design Engineering"  >Design Engineering</option>
+                                <option value="Drafting">Drafting</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">  Task Description <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea id="textarea" required="required" name="textarea"  class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                          <button type="button" class="btn btn-primary">Cancel</button>
+                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+{% endblock %}

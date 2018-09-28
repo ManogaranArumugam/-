@@ -1,0 +1,66 @@
+{% extends "common/default_header.html" %}
+{% block body %}
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Client & EndUser
+                <small>Client Details</small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a href="{% url 'client_form' %}"><i class="fa fa-plus btn btn-round btn-primary"> Add</i></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Client Code</th>
+                    <th>Client name</th>
+                    <th>Contact Person Name</th>
+                    <th> Mobile No.</th>
+                    <th>Telephone No.</th>
+
+
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                {% for client in client_details %}
+
+                <tr>
+                    <td>{{ client.client_id }}</td>
+
+                    <td> {{ client.client_code }}</td>
+                    <td> {{ client.client_name }}</td>
+                    <td> {{ client.contact_person }}</td>
+                    <td> {{ client.mobileno }}</td>
+                    <td> {{ client.telephon }}</td>
+
+
+                    <td>
+                        <a href="{% url 'client_form_edit' client.id %}" title="Edit" class="btn btn-warning  btn-xs"><i
+                            class="fa fa-edit"></i> </a>
+                        <a href="#" title="delete" class="btn btn-danger btn-xs"> <i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+
+
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

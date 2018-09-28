@@ -1,0 +1,76 @@
+{% extends "common/default_header.html" %}
+{% block body %}
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Job
+                <small>Project Details</small>
+            </h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li><a href="{% url 'project_form' %}"><i class="fa fa-plus btn btn-round btn-primary"> Add</i></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Project Type</th>
+                    <th>Project Code</th>
+                    <th>Project name</th>
+                    <th>Client Name</th>
+                    <th> EndUser name</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Estimated MH.</th>
+
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                {% for project in project_details %}
+
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ project.project_type }}</td>
+                    <td>{{ project.project_code }}</td>
+                    <td>{{ project.project_name }}</td>
+                    <td>{{ project.client.client_name }}</td>
+                    <td>{{ project.enduser.client_name }}</td>
+
+                    <td>{{ project.project_startdate|date:"d-m-Y"  }}</td>
+                    <td>{{ project.project_startdate|date:"d-m-Y"  }}</td>
+
+                    <td></td>
+
+
+                    <td>
+                        <a href="{% url 'project_form_edit' project.id  %}" title="Edit" class="btn btn-warning  btn-xs"><i
+                            class="fa fa-edit"></i> </a>
+                        <a href="{% url 'sub_project_form'  project.id  %}" title="Sub Project Add" class="btn btn-info btn-xs"> <i
+                            class="fa fa-plus-square-o"></i> </a>
+                        <a href="{% url 'sub_project_view'  project.id  %} " title="Sub project View" class="btn btn-success btn-xs"><i
+                            class="fa fa-outdent"></i> </a>
+                        <a href="#" title="delete" class="btn btn-danger btn-xs"> <i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+
+
+                {% endfor %}
+
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

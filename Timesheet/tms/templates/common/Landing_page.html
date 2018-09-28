@@ -1,0 +1,29 @@
+
+
+{% include 'common/header_logo_left.html' %}
+
+{% include 'common/header_logo_right.html' %}
+
+{% include 'common/body.html' %}
+{% block body %}
+
+
+<a href="{% url 'login_dashboard' %}" >
+
+
+ <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12"  >
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-check-square-o"></i>
+                          </div>
+                          <div class="count">TMS</div>
+
+                          <p>Daily tracking Man-hours</p>
+
+                        </div>
+                      </div>
+    </a>
+
+
+{% endblock %}
+{% include 'common/footer_content.html' %}
+{% include 'common/footer_body.html' %}
